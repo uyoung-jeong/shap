@@ -30,7 +30,7 @@ class PyTorchDeep(Explainer):
         if type(model) == tuple:
             self.interim = True
             model, layer = model
-            model = model.eval()
+            #model = model.eval()
             self.layer = layer
             self.add_target_handle(self.layer)
 
@@ -46,7 +46,7 @@ class PyTorchDeep(Explainer):
                     self.interim_inputs_shape = [interim_inputs.shape]
             self.target_handle.remove()
             del self.layer.target_input
-        self.model = model.eval()
+        #self.model = model.eval()
 
         self.multi_output = False
         self.num_outputs = 1
