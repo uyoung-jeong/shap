@@ -47,6 +47,7 @@ class PyTorchDeep(Explainer):
             self.target_handle.remove()
             del self.layer.target_input
         #self.model = model.eval()
+        self.model = model
 
         self.multi_output = False
         self.num_outputs = 1
